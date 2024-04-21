@@ -1,0 +1,94 @@
+HTML CSS JSResult Skip Results Iframe
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+canvas {
+  background: radial-gradient(circle, rgba(8, 8, 18,1) 20%, rgba(15,6,45,1) 100%);
+/*  background: radial-gradient(circle, rgba(253, 252, 232,1) 20%, rgba(15,6,45,1) 100%);*/
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hint {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  color: #FFF;
+  font-family: Arial;
+  opacity: 0;
+  animation: hide 7s;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .pyramid {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotateY(326deg) rotateX(2deg) rotateZ(359deg);
+    animation: rotate 5s linear infinite;
+  }
+  .side {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0.7;
+    border: 100px solid transparent;
+    border-bottom: 200px solid red;
+    border-top: 0px;
+  }
+  .base {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(73px) rotateX(90deg);
+    border: 0;
+    background: blue;
+  }
+  .one {
+    transform: rotateX(30deg);
+    transform-origin: 0 0;
+  }
+  .two {
+    transform-origin: 100px 0;
+    transform: rotateY(90deg) rotateX(-30deg);
+    border-bottom-color: purple;
+  }
+  .three {
+    transform-origin: 100px 0;
+    transform: rotateY(270deg) rotateX(-30deg);
+    border-bottom-color: hotpink;
+  }
+  .four {
+    transform-origin: 100px 0;
+    transform: rotateY(0) rotateX(-30deg);
+    border-bottom-color: yellow;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotateY(0) rotateX(30deg) rotateZ(30deg);
+    }
+    to {
+      transform: rotateY(360deg) rotateX(30deg) rotateZ(30deg);
+    }
+  }
